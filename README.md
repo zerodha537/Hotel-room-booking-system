@@ -1,11 +1,11 @@
-#📘 Hotel Room Booking System
+# 📘 Hotel Room Booking System
 
 A Java Full-Stack application built using Spring Boot, MySQL, and React/Angular that allows users to search rooms, book them, and manage reservations. Includes JWT-based authentication, admin dashboard, and role-based access control.
 
 ---
 
 
-#📑 Table of Contents
+# 📑 Table of Contents
 
 Project Overview
 
@@ -34,7 +34,7 @@ License
 ---
 
 
-#📌 Project Overview
+# 📌 Project Overview
 
 The Hotel Room Booking System is a moderate-level full-stack application where users can:
 
@@ -59,9 +59,9 @@ This project is ideal for learning Java Full Stack development, covering both ba
 ---
 
 
-#⭐ Features
+# ⭐ Features
 
-#👤 User Features
+# 👤 User Features
 
 Register and login
 
@@ -73,7 +73,10 @@ View personal booking history
 
 JWT-secured access
 
-🛠 Admin Features
+---
+
+
+# 🛠  Admin Features
 
 Add, update, delete rooms
 
@@ -86,7 +89,7 @@ Role-based access (Admin/User)
 ---
 
 
-#🚀 Additional Features
+# 🚀 Additional Features
 
 Booking conflict validation
 
@@ -101,7 +104,7 @@ Responsive UI
 ---
 
 
-#🛠 Tech Stack
+# 🛠 Tech Stack
 
 Backend
 
