@@ -1,0 +1,48 @@
+CREATE DATABASE hotel_booking;
+USE hotel_booking;
+
+CREATE TABLE user (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    role ENUM('USER', 'ADMIN') DEFAULT 'USER'
+);
+
+CREATE TABLE room (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    room_number VARCHAR(10) UNIQUE NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    price_per_night DECIMAL(10,2) NOT NULL,
+    available BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE booking (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    room_id BIGINT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    status ENUM('CONFIRMED', 'CANCELLED') DEFAULT 'CONFIRMED',
+    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (room_id) REFERENCES room(id)
+);
+
+CREATE TABLE payment (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    booking_id BIGINT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    status ENUM('PENDING', 'COMPLETED') DEFAULT 'PENDING',
+    FOREIGN KEY (booking_id) REFERENCES booking(id)
+);
+
+-- Sample data
+INSERT INTO user (username, password, email, role) VALUES
+('admin', '$2a$10$exampleHashedPassword', 'admin@example.com', 'ADMIN'),  -- Password: admin123 (hashed)
+('user1', '$2a$10$exampleHashedPassword', 'user1@example.com', 'USER');  -- Password: user123
+
+INSERT INTO room (room_number, type, price_per_night, available) VALUES
+('101', 'Single', 100.00, TRUE),
+('102', 'Double', 150.00, TRUE),
+('201', 'Suite', 250.00, TRUE);
