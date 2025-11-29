@@ -1,1 +1,139 @@
-# Hotel-room-booking-system
+#📘 Hotel Room Booking System
+
+A Java Full-Stack application built using Spring Boot, MySQL, and React/Angular that allows users to search rooms, book them, and manage reservations. Includes JWT-based authentication, admin dashboard, and role-based access control.
+
+---
+
+
+#📑 Table of Contents
+
+Project Overview
+
+Features
+
+Tech Stack
+
+Architecture
+
+Backend Setup (Spring Boot)
+
+Frontend Setup (React-or-angular)
+
+Database Schema
+
+API Endpoints
+
+Project Structure
+
+Screenshots (Optional)
+
+Future Enhancements
+
+License
+
+---
+
+
+#📌 Project Overview
+
+The Hotel Room Booking System is a moderate-level full-stack application where users can:
+
+Search available rooms
+
+Book rooms
+
+View their bookings
+
+Login / register using JWT authentication
+
+Admins can:
+
+Manage rooms (CRUD)
+
+View all bookings
+
+Control availability
+
+This project is ideal for learning Java Full Stack development, covering both backend and frontend with a real-world workflow.
+
+---
+
+
+#⭐ Features
+
+#👤 User Features
+
+Register and login
+
+Search rooms by date, type, or price
+
+Book rooms
+
+View personal booking history
+
+JWT-secured access
+
+🛠 Admin Features
+
+Add, update, delete rooms
+
+View all bookings
+
+Manage room inventory
+
+Role-based access (Admin/User)
+
+---
+
+
+#🚀 Additional Features
+
+Booking conflict validation
+
+Form validations
+
+Notifications for success/error
+
+Protected routes
+
+Responsive UI
+
+---
+
+
+#🛠 Tech Stack
+
+Backend
+
+Java 17+
+
+Spring Boot
+
+Spring Data JPA
+
+Spring Security + JWT
+
+MySQL
+
+ModelMapper
+
+Lombok
+
+Frontend
+
+Choose one:
+
+React + Axios + React Router
+OR
+
+Angular + HttpClient + Guards
+
+Tools / Build
+
+Maven
+
+Node.js
+
+Postman / Thunder Client
+
+Docker (optional)
