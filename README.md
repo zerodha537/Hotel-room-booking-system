@@ -140,3 +140,141 @@ Node.js
 Postman / Thunder Client
 
 Docker (optional)
+
+
+---
+
+# 📐 Architecture
+
+Frontend (React/Angular)
+
+        |
+        
+        | REST API (JSON)
+        
+        |
+        
+Backend (Spring Boot)
+
+        |
+        
+        | JPA/Hibernate
+        
+        |
+        
+   MySQL Database
+
+   ---
+
+# 🗄 Database Schema
+Tables
+
+users
+
+rooms
+
+bookings
+
+payments (placeholder)
+
+---
+
+# 🔗 API Endpoints
+
+Authentication
+
+Method	       Endpoint	           Description
+
+POST	       /api/auth/register	   Register new user
+
+POST	       /api/auth/login	     Login & get JWT
+
+Rooms
+
+Method	        Endpoint	        Description
+
+GET	            /api/rooms	      Get all rooms
+
+POST	          /api/rooms	      Add room (Admin)
+
+PUT	           /api/rooms/{id}    Update room (Admin)
+
+DELETE	       /api/rooms/{id}    Delete room (Admin)
+
+
+Booking
+
+Method	     Endpoint	            Description 
+
+POST	      /api/bookings	        Create booking
+
+GET	        /api/bookings/user	  Get user bookings
+
+GET	        /api/bookings/all	    Admin: all bookings
+
+DELETE	    /api/bookings/{id}	   Cancel booking
+
+
+---
+
+
+# 📁 Project Structure
+
+Backend
+
+src/main/java/com/project/hotel
+
+│── controller
+
+│── service
+
+│── repository
+
+│── model/entity
+
+│── dto
+
+│── config (JWT, Security)
+
+
+ Frontend (React)
+ 
+src/
+
+│── components/
+
+│── pages/
+
+│── services/
+
+│── hooks/
+
+│── utils/
+
+
+---
+
+
+# 📌 Conclusion
+
+The Hotel Room Booking System provides a complete, production-ready foundation for a real-world Java full-stack application.
+
+By integrating Spring Boot, JWT authentication, MySQL, and a modern frontend framework (React/Angular), this project demonstrates essential skills required for full-stack development, including:
+
+Secure user authentication
+
+Role-based authorization
+
+RESTful API design
+
+Database modeling and validation
+
+Frontend integration with backend services
+
+Admin and user-level workflows
+
+Responsive and user-friendly UI
+
+This project is an excellent addition to any Java developer’s portfolio, showcasing the ability to build a full, end-to-end web application. It can be further extended with real payments, email notifications, or
+
+analytics dashboards, making it a strong foundation for learning or real deployment.
